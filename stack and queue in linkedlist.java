@@ -1,4 +1,6 @@
-package javaapplication1;
+package javaapplication2;
+
+import java.util.Scanner;
 
  class linkedlistnode {
 
@@ -97,11 +99,39 @@ package javaapplication1;
 
 
 
-public class JavaApplication1 {
+public class JavaApplication2 {
 
     public static void main(String[] args) {
         linkedlist node = new linkedlist();
-        node.print();
+        Scanner input = new Scanner (System.in);
+        boolean exit = true;
+        int b,pilih;
+        do {
+            System.out.println("menu");
+            System.out.println("1.masukan data");
+            System.out.println("2.lihat data");
+            System.out.println("3.exit");
+            System.out.print("masukan pilihan anda :");
+            pilih = input.nextInt();
+            switch (pilih){
+                case 1: 
+                    System.out.print("masukan data :");
+                    b = input.nextInt();
+                    node.push(new linkedlistnode(b));
+                    break;
+                case 2:
+                    System.out.println("data yang ada :");
+                    node.print();
+                    break;
+                case 3:
+                    exit = false;
+                    break;
+            }
+            System.out.println("");
+        }while(exit);
+   
+   
+        /*node.print();
         System.out.println(node.qpop());
         System.out.println(node.spop());
         node.push(new linkedlistnode(5));
@@ -110,7 +140,7 @@ public class JavaApplication1 {
         System.out.println(node.spop().data);
         node.push(new linkedlistnode(4));
         System.out.println(node.qpop().data);
-        node.print();
+        node.print();*/
     
     }
 
