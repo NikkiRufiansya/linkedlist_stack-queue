@@ -108,29 +108,49 @@ public class JavaApplication2 {
         int b,pilih;
         do {
             System.out.println("menu");
-            System.out.println("1.masukan data");
-            System.out.println("2.lihat data");
-            System.out.println("3.exit");
+            System.out.println("1.masukan data stack ");
+            System.out.println("2.masukan data queue");
+            System.out.println("3.lihat data");
+            System.out.println("4.exit");
             System.out.print("masukan pilihan anda :");
             pilih = input.nextInt();
             switch (pilih){
                 case 1: 
-                    System.out.print("masukan data :");
+                    System.out.print("masukan data  stack :");
                     b = input.nextInt();
                     node.push(new linkedlistnode(b));
                     break;
                 case 2:
-                    System.out.println("data yang ada :");
+                    System.out.print("masukan data  stack :");
+                    b = input.nextInt();
+                    node.push(new linkedlistnode(b));
+                    break;
+                    
+                case 3:
+                    System.out.println("data stack :");
+                    node.spop();
+                    node.print();
+                    System.out.println("data queue :");
+                    node.qpop();
                     node.print();
                     break;
-                case 3:
+                case 4:
                     exit = false;
                     break;
             }
             System.out.println("");
         }while(exit);
-   
-   
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /*node.print();
         System.out.println(node.qpop());
         System.out.println(node.spop());
